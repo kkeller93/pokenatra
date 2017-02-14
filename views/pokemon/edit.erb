@@ -1,0 +1,16 @@
+<h2>Edit Artist</h2>
+
+<form action="/pokemon/<%= @pokemon.id %>" method="post">
+  <input type="hidden" name="_method" value="put">
+
+  <label for="pokemon[cp]">CP:</label>
+  <input name="pokemon[cp]" value="<%= @pokemon.cp %>">
+
+  <label for="pokemon[name]">Name:</label>
+  <input name="pokemon[name]" value="<%= @pokemon.name %>">
+
+  <label for="pokemon[poke_type]">Type:</label>
+  <input name="pokemon[poke_type]" value="<%= @pokemon.poke_type %>">
+
+  <input type="submit" value="Update">
+</form>
