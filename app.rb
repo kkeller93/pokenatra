@@ -15,6 +15,11 @@ get '/pokemon/new' do
   erb :"pokemon/new"
 end
 
+post '/pokemon' do
+  @pokemon = Pokemon.create(params[:pokemon])
+  redirect "/pokemon/#{@pokemon.id}"
+end
+
 get '/pokemon/:id' do
   @pokemon = Pokemon.find(params[:id])
   erb :"pokemon/show"
@@ -27,7 +32,7 @@ end
 
 post '/pokemon/:id' do
   @pokemon = Pokemon.create(params[:pokemon])
-  redirect("/pokemon/#{@pokemon.id}")
+  redirect ("/pokemon/#{@pokemon.id}")
 end
 
 delete '/pokemon/:id' do
