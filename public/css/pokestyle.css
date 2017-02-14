@@ -1,6 +1,4 @@
-/*
-
-Uncomment for sick pokestyle
+/*Uncomment for sick pokestyle*/
 
 @font-face {
   font-family: "Pokemon";
@@ -15,6 +13,10 @@ a, p, h2, h3 {
   border-radius: 100px;
 }
 
+p {
+  display: inline-block;
+}
+
 
 body {
   background-image: url(../images/pokedex.png);
@@ -23,6 +25,7 @@ body {
   font-family: "Pokemon", monospace;
   letter-spacing: .25em;
   font-size: 200%;
+  text-align: center;
 }
 
 a:hover {
@@ -51,6 +54,7 @@ a:hover {
   border-left-color: rgba(255, 0, 0, .5);
   border-right-color: rgba(225, 225, 225, .5);
   border-bottom-color: rgba(225, 225, 225, .5);
+
 }
 
 @keyframes pulse {
@@ -70,4 +74,4 @@ a:hover {
     text-shadow: 4px 4px 3px rgba(255, 0, 0, .3);
     background-color: rgba(0, 0, 0, .1);
   }
-}*/
+}

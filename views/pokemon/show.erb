@@ -1,0 +1,9 @@
+<h2><%= @pokemon.name %></h2>
+<img class='pokemon-photo' src="<%= @pokemon.img_url %>">
+<h3><%= @pokemon.poke_type %></h3>
+<h3><%= @pokemon.cp %></h3>
+<!-- <a href="/pokemon/<%= @pokemon.id %>/edit">Edit</a><a href="/pokemon/<%= @pokemon.id %>/edit">         Remove</a> -->
+<form action="/pokemon/<%= @pokemon.id %>" method="post">
+  <input type="hidden" name="_method" value="delete">
+  <input class="button-delete" type="submit" value="Delete">
+</form>
